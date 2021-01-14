@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+		select{
+			padding:0.5em 1em;
+			margin: 0.5em;
+			float:right;
+			width:100%;
+			
+		}
+        span {
+            font-family: "Myriad Pro", "sans-serif";
+            font-size: 20px;
+            color: white;			
+			width:100%;
+			text-align:right;
+        }
+		
+		p {
+            font-family: "Myriad Pro", "sans-serif";
+            font-size: 20px;
+            color: white;			
+			width:100%;
+			text-align:left;
+			margin:15px 0px 0px 0px;
+        }
+		
+
+a {
+text-decoration: none;
+display: inline-block;
+padding: 16px 16px;
+}
+        a:hover {
+                background-color:salmon;
+                color: black;
+                }
+                .previous {
+                    background-color:salmon;
+					color: black;
+					float:right;
+					
+                }
+                .next {
+					background-color:salmon;
+					color: black;
+					float:right;
+				}
+</style>
+</head>
+
+<body background="colour.jpg">
+    
+	<div class="container">
+	
+    <div class="w-75 my-4 mx-auto d-block">
+	<h3 class="mb-4 text-center" style="color:white;"><b>Ticket and Combo Selection</b></h3>
+	
+	<form>    
+		<div class="row">
+			<div class="col-md-6" >
+				<p>Adult Tickets @10.5€</p>			
+			</div>
+			<div class="col-md-6" >
+				<select id='myTickets' class="tickets-select">
+					<option value="none">none</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</select>
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col-md-6" >
+				<p>Student Tickets @8.5€</p>			
+			</div>
+			<div class="col-md-6" >
+				<select id='myTickets' class="tickets-select">
+					<option value="none">none</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</select>
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col-md-6" >
+				<p>Large Popcorn + Nachos @13€</p>			
+			</div>
+			<div class="col-md-6" >
+				<select id='myTickets' class="tickets-select">
+					<option value="none">none</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</select>
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col-md-6" >
+				<p>Monday Meal Deal = Large Popcorn + 2 Children Tickets @16€</p>			
+			</div>
+			<div class="col-md-6" >
+				<select id='myTickets' class="tickets-select">
+					<option value="none">none</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</select>
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col-md-6" >
+				<p>Coffee + Medium Popcorn @10.5€</p>			
+			</div>
+			<div class="col-md-6" >
+				<select id='myTickets' class="tickets-select">
+					<option value="none">none</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</select>
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col-md-6" >
+				<p>Student Deal = 1 Large Popcorn+Nachos + Coffee @18.5€</p>			
+			</div>
+			<div class="col-md-6" >
+				<select id='myTickets' class="tickets-select">
+					<option value="none">none</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</select>
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col-md-6" >
+				<p>Kids Meal @11€</p>			
+			</div>
+			<div class="col-md-6" >
+				<select id='myTickets' class="tickets-select">
+					<option value="none">none</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</select>
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col-md-6" >
+				<p>Senior Ticket @6.5€</p>			
+			</div>
+			<div class="col-md-6" >
+				<select id='myTickets' class="tickets-select">
+					<option value="none">none</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</select>
+			</div>		
+		</div>
+		<button type="button" id="next" class="mt-2 float-right btn btn-lg btn-warning" value="NEXT" >NEXT</button>
+		<br/>
+		<br/>
+	</form>	
+	</div>
+	</div>	
+  
+
+<script>
+	$("#next").click(function()
+	{
+		console.log("click");
+		 
+		//$("#tickets select").children("option:selected").val();
+		
+		var n=0;
+		var tickets_value = "";
+		$(".tickets-select").each(function()
+		{
+				if($(this).children("option:selected").text()!="none")
+				{
+						n++;
+						console.log($(this).parent().parent().find('div:eq(0) > p').text()+" : "+$(this).children("option:selected").text());
+						
+						tickets_value = tickets_value +" ("+$(this).parent().parent().find('div:eq(0) p').text()+") X "+$(this).children("option:selected").text()+"  |  ";
+ 						
+				}
+		});
+		
+		if(n==0)
+		{
+			alert("Please select your ticket");
+			
+		}else
+		{ 
+			localStorage.setItem("tickets", tickets_value);
+			window.location = "seat.html";
+		}
+		
+	});
+ </script>
+</body>
+
+</html>
+</body>
+
+</html>

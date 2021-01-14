@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+h1 { 
+  display: block;
+  font-size: 2 em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 5;
+  margin-right: 1;
+  font-weight: bold;
+  color:salmon;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+</style>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+</head>
+ 
+ <style>
+	label{color:white;}
+ </style>
+
+<body background="colour.jpg">
+<div class="mt-5 container">
+<form class="px-lg-5 w-75 mx-auto form-horizontal" >
+  <div class="form-group">
+      <label class="control-label" for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" id="name">
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="email">Email:</label>
+    <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email" id="email">
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="pwd" id="pwd">
+  </div>
+  <div class="form-group">        
+    <div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="remember"> Notify me</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">        
+  <input type="button" class="float-right btn btn-success" id="register" value="REGISTER"></input>
+	<div class="clearfix"></div>
+  </div>
+</form>
+</div>
+  
+<div class="content w-75 mx-auto ">	
+	<br/>
+        <h1 class="text-center" style="font-size:50px;">PHOENIX MOVIES</h1>
+</div>
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Welcome</h4>
+        <button type="button" class="close" data-dismiss="myModal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p id="msg"></p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <a href="movielisting.html" class="btn btn-success" >Book Tickets</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+	$("#register").click(function()
+	{
+		var name = $("#name").val();
+		var email = $("#email").val();
+		var pwd = $("#pwd").val();
+		 
+		if(name.length==0)
+		{
+			alert("Invalid Name");
+			
+		}else if(email.length==0)
+		{
+			alert("Invalid Email");
+			
+		}else if(pwd.length==0)
+		{
+			alert("Invalid Password");
+			
+		}else 
+		{
+			localStorage.setItem("name", name);
+			var msg = "Welcome "+name+". Thank you for your registraion.";
+			$("#myModal").show();
+			$("#msg").text(msg);
+			
+		}
+	});
+</script>
+
+</body>
+</html>

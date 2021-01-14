@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ticket Booking Details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+	.bold{font-weight:bold;}
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Ticket Booking Details</h1>
+  <p class="bold" >Thank You!Enjoy the Movie!</p> 
+  <div class="row">
+    <div class="col-sm-4">
+      
+    </div>
+    <div class="col-sm-4">      
+		<img src="" id="img" />
+		<h4 class="mt-3 bold"  id="movie"></h4>
+    </div>
+    <div class="col-sm-4">
+       
+    </div>
+  </div>
+</div>
+  
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Ticket Details</h3>      
+      <p class="bold"  id="ticket_Details"></p>
+    </div>
+     
+    <div class="col-sm-6">
+      <h3>Seat Number</h3>      
+      <p class="bold" id="Seat_Number"></p>
+    </div>
+  </div>
+</div>
+<script>
+	$(document).ready(function() {
+		
+		//console.log();
+		
+		$("#img").attr("src","img/"+localStorage.getItem("img")+".jpg");
+		$("#ticket_Details").text(localStorage.getItem("tickets"));
+		$("#movie").text(localStorage.getItem("movie"));
+		$("#Seat_Number").text(localStorage.getItem("seats"));
+		 
+	});
+</script>
+
+</body>
+</html>
